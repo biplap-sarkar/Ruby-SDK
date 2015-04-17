@@ -11,8 +11,8 @@ helps you make API calls to the WePay API v2
 
 class WePay
 	
-	STAGE_API_ENDPOINT = "http://vm.wepay.com/v2"
-	STAGE_UI_ENDPOINT = "http://vm.wepay.com/v2"
+	STAGE_API_ENDPOINT = "http://10.0.2.2/v2"
+	STAGE_UI_ENDPOINT = "http://10.0.0.2/v2"
 	
 	PRODUCTION_API_ENDPOINT = "https://wepayapi.com/v2"
 	PRODUCTION_UI_ENDPOINT = "https://www.wepay.com/v2"
