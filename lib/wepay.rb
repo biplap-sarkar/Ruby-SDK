@@ -14,8 +14,8 @@ class WePay
 	STAGE_API_ENDPOINT = "http://10.0.2.2/v2"
 	STAGE_UI_ENDPOINT = "http://10.0.0.2/v2"
 	
-	PRODUCTION_API_ENDPOINT = "https://wepayapi.com/v2"
-	PRODUCTION_UI_ENDPOINT = "https://www.wepay.com/v2"
+	PRODUCTION_API_ENDPOINT = "http://10.0.2.2/v2"
+	PRODUCTION_UI_ENDPOINT = "http://10.0.2.2/v2"
 		
 	# initializes the API application, api_endpoint should be something like 'https://stage.wepay.com/v2'
 	def initialize(_client_id, _client_secret, _use_stage = true, _use_ssl = false, _api_version = nil)
@@ -53,7 +53,7 @@ class WePay
 		# create the request object
 		request = Net::HTTP.new(url.host, url.port)
 		request.read_timeout = 30
-		request.use_ssl = @use_ssl
+		#request.use_ssl = @use_ssl
 		# make the call
 		response = request.start {|http| http.request(call) }
 		# returns JSON response as ruby hash
