@@ -18,7 +18,7 @@ class WePay
 	PRODUCTION_UI_ENDPOINT = "https://www.wepay.com/v2"
 		
 	# initializes the API application, api_endpoint should be something like 'https://stage.wepay.com/v2'
-	def initialize(_client_id, _client_secret, _use_stage = true, _use_ssl = true, _api_version = nil)
+	def initialize(_client_id, _client_secret, _use_stage = true, _use_ssl = false, _api_version = nil)
 		@client_id = _client_id
 		@client_secret = _client_secret
 		if _use_stage
