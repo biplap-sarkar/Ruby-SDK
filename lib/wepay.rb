@@ -42,7 +42,7 @@ class WePay
 			call.body = params.to_json
 		end
 		if access_token
-			call.add_field('Authorization: Bearer', access_token);
+			call.add_field('Authorization', "Bearer #{access_token}");
 		end
         
         # send Api Version header with call request
